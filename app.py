@@ -84,7 +84,7 @@ if user_input := st.chat_input("Ask a theological or historical question..."):
     with st.chat_message("assistant"):
         with st.spinner("Analyzing sacred texts..."):
             response = client.models.generate_content(
-                model="gemini-2.0-flash",
+                model="gemini-1.5-flash",
                 contents=user_input,
                 config={"system_instruction": system_instruction},
             )
@@ -93,7 +93,7 @@ if user_input := st.chat_input("Ask a theological or historical question..."):
 
             # --- Translation Step ---
             translation_response = client.models.generate_content(
-                model="gemini-2.0-flash",
+                model="gemini-1.5-flash",
                 contents=f"""
     Translate the following text into Amharic.
 
