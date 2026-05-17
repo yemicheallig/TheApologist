@@ -2,5 +2,6 @@ streamlit
 google-genai
 sentence-transformers
 torchvision
+python-dotenv
 faiss-cpu
 numpy
